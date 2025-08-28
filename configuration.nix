@@ -26,10 +26,12 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    pkgs.atlauncher
     pkgs.jetbrains.ruby-mine
     pkgs.wl-clipboard
     prismlauncher
     vim
+    waveterm
     wget
   ];
 
