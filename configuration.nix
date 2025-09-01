@@ -24,12 +24,11 @@
 
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "dave";
-  nixpkgs.config.allowUnfree = true;git st
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     pkgs.atlauncher
     pkgs.jetbrains.ruby-mine
-    pkgs.oh-my-posh
     pkgs.warp-terminal
     pkgs.wl-clipboard
     prismlauncher
