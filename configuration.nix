@@ -13,6 +13,7 @@
       ./modules/i18n.nix
       ./modules/networking.nix
       ./modules/printing.nix
+      ./modules/shell.nix
       ./modules/steam.nix
       ./modules/user.nix
     ];
@@ -23,15 +24,16 @@
 
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "dave";
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;git st
 
   environment.systemPackages = with pkgs; [
     pkgs.atlauncher
     pkgs.jetbrains.ruby-mine
+    pkgs.oh-my-posh
+    pkgs.warp-terminal
     pkgs.wl-clipboard
     prismlauncher
     vim
-    waveterm
     wget
   ];
 
