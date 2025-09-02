@@ -27,8 +27,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    pkgs.atlauncher
     pkgs.jetbrains.ruby-mine
+    pkgs.prismlauncher
     pkgs.warp-terminal
     pkgs.wl-clipboard
     prismlauncher
