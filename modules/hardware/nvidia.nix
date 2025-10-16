@@ -1,21 +1,25 @@
 { pkgs, config, libs, ... }:
 
 {
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware = {
+    graphics.enable = true;
 
-    prime = {
-      sync.enable = true;
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
+      open = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-      nvidiaBusId = "PCI:1:0:0";
-      amdgpuBusId = "PCI:10:0:0";
+      prime = {
+        sync.enable = true;
+
+        nvidiaBusId = "PCI:1:0:0";
+        amdgpuBusId = "PCI:10:0:0";
+      };
     };
   };
+
+  services.xserver.videoDrivers = ["nvidia"];
 }
