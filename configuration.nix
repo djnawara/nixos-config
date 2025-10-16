@@ -50,6 +50,7 @@
     ghostty
     git
     gnumake
+    killall
     lazydocker
     lsd
     neovim
@@ -60,6 +61,7 @@
     openvpn
     papirus-icon-theme
 
+    pkgs.kdePackages.kcharselect
     pkgs.prismlauncher
     pkgs.warp-terminal
 
