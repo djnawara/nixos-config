@@ -9,8 +9,6 @@
   time.timeZone = "America/Detroit";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "dave";
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [
@@ -83,6 +81,18 @@
 
   security.polkit.enable = true;
   virtualisation.docker.enable = true;
+
+  programs = {
+    niri.enable = true;
+    xwayland.enable = true;
+  };
+
+  environment.variables = {
+    LD_LIBRARY_PATH = "/run/opengl-driver/lib";
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    OZONE_PLATFORM = "wayland";
+    GDK_BACKEND = "wayland";
+  };
 
   system.stateVersion = "25.05";
 }
