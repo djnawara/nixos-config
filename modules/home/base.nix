@@ -8,6 +8,7 @@
   imports = [
     ./waybar/waybar.nix
     ./niri/niri.nix
+    ./warp/warp.nix
     ./bash.nix
     ./ghostty.nix
     ./tmux.nix
