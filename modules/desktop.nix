@@ -14,4 +14,6 @@
       variant = "";
     };
   };
+
+  console.keyMap = "us";
 }
