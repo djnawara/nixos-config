@@ -25,6 +25,7 @@
       ll = "lsd -alh --group-dirs first";
       cat = "bat";
       update = "sudo nixos-rebuild switch --flake .";
+      wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
     };
 
     # Add to /etc/zshrc
