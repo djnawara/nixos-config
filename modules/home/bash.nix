@@ -10,6 +10,7 @@
       ls = "lsd";
       ll = "lsd -alh --group-dirs first";
       cat = "bat";
+      update = "sudo nixos-rebuild switch --flake .";
     };
 
     # Your environment variables

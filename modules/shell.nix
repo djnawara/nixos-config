@@ -19,13 +19,12 @@
     syntaxHighlighting.enable = true;
     histSize = 10000;
 
-    shellAliases = {
-      ll = "ls -a -lgh --color";
-      update = "sudo nixos-rebuild switch";
-    };
+    shellAliases = { };
 
     # Add to /etc/zshrc
     promptInit = ''
+      source ~/.bashrc
+
       export EDITOR=vim
 
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
