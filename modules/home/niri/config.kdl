@@ -306,8 +306,8 @@ window-rule {
     tiled-state true
 }
 
-workspace "ide"
 workspace "terminal"
+workspace "ide"
 workspace "browser"
 workspace "other"
 workspace "steam"
