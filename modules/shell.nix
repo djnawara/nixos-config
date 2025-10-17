@@ -19,13 +19,21 @@
     syntaxHighlighting.enable = true;
     histSize = 10000;
 
-    shellAliases = { };
+    shellAliases = {
+      grep = "grep --color=auto";
+      ls = "lsd";
+      ll = "lsd -alh --group-dirs first";
+      cat = "bat";
+      update = "sudo nixos-rebuild switch --flake .";
+    };
 
     # Add to /etc/zshrc
     promptInit = ''
-      source ~/.bashrc
-
       export EDITOR=vim
+
+      export PATH="$PATH:$HOME/.local/bin"
+      eval "$(ssh-agent -s)"
+      ssh-add ~/.ssh/id_ed25519
 
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       source /etc/powerlevel10k/p10k.zsh
