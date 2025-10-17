@@ -75,7 +75,10 @@
     wlogout
     wofi
     xdg-desktop-portal-wlr
+
     xfce.thunar
+    xfce.xfce4-pulseaudio-plugin
+    xfce.xfce4-settings
 
     xwayland
     xwayland-satellite
