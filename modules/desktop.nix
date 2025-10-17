@@ -1,17 +1,26 @@
 {pkgs, ...}:
 
 {
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
   services = {
     displayManager = {
       enable = true;
       ly.enable = true;
+      defaultSession = "xfce";
     };
 
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
+    xserver = {
+      desktopManager = {
+        xfce = {
+          enable = true;
+          noDesktop = true;
+          enableXfwm = false;
+        };
+      };
+
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
   };
 
