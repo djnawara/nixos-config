@@ -306,30 +306,64 @@ window-rule {
     tiled-state true
 }
 
-workspace "1"
-workspace "term"
-workspace "3"
-workspace "4"
+workspace "ide"
+workspace "terminal"
+workspace "browser"
+workspace "other"
 workspace "steam"
 
 window-rule {
-    match app-id=r#"steam"#
-    open-on-workspace "steam"
+  match app-id=r#"jetbrains-clion"#
+  open-on-workspace "ide"
+  open-maximized true
+  open-focused true
 }
 window-rule {
-    match app-id=r#"^discord$"#
-    open-on-workspace "steam"
+  match app-id=r#"jetbrains-pycharm"#
+  open-on-workspace "ide"
+  open-maximized true
+  open-focused true
+}
+window-rule {
+  match app-id=r#"jetbrains-rider"#
+  open-on-workspace "ide"
+  open-maximized true
+  open-focused true
+}
+window-rule {
+  match app-id=r#"jetbrains-rubymine"#
+  open-on-workspace "ide"
+  open-maximized true
+  open-focused true
 }
 
 window-rule {
-    match app-id=r#"ghostty"#
-    open-maximized true
-    open-on-workspace "term"
+  match app-id=r#"firefox"#
+  open-on-workspace "browser"
+  open-focused true
+}
+
+window-rule {
+  match app-id=r#"steam"#
+  open-on-workspace "steam"
 }
 window-rule {
-    match app-id=r#"warp"#
-    open-maximized true
-    open-on-workspace "term"
+  match app-id=r#"^discord$"#
+  open-on-workspace "steam"
+  open-focused true
+}
+
+window-rule {
+  match app-id=r#"ghostty"#
+  open-on-workspace "terminal"
+  open-maximized true
+  open-focused true
+}
+window-rule {
+  match app-id=r#"dev.warp.Warp"#
+  open-on-workspace "terminal"
+  open-maximized true
+  open-focused true
 }
 
 // Example: block out two password managers from screen capture.
@@ -377,7 +411,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal " { spawn "ghostty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal " { spawn "warp-terminal"; }
     Mod+B hotkey-overlay-title="Open a Browser " { spawn "firefox"; }
     Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "wofi --show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
