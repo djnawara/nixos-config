@@ -8,8 +8,7 @@
     shellAliases = {
       grep = "grep --color=auto";
       ls = "lsd";
-      ll = "ls -algh --color";
-      la = "ls -lAtr";
+      ll = "lsd -alh --group-dirs first";
       cat = "bat";
     };
 
