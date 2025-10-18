@@ -7,12 +7,10 @@
 
   imports = [
     ./waybar/waybar.nix
-    ./niri/niri.nix
     ./warp/warp.nix
-    ./bash.nix
+    ./plasma.nix
     ./ghostty.nix
     ./tmux.nix
-    ./wofi.nix
   ];
 
   home.packages = with pkgs; [
