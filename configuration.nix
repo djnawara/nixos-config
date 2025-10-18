@@ -25,7 +25,6 @@
       ./modules/firefox.nix
       ./modules/fonts.nix
       ./modules/git.nix
-      ./modules/hyprland.nix
       ./modules/i18n.nix
       ./modules/jetbrains.nix
       ./modules/neovim.nix
@@ -61,7 +60,6 @@
     openvpn
     papirus-icon-theme
 
-    pkgs.kdePackages.kcharselect
     pkgs.prismlauncher
     pkgs.warp-terminal
 
@@ -73,31 +71,10 @@
     wireshark
     wl-clipboard-rs
     wlogout
-    wofi
-    xdg-desktop-portal-wlr
-
-    xfce.thunar
-    xfce.xfce4-pulseaudio-plugin
-    xfce.xfce4-settings
-
-    xwayland
-    xwayland-satellite
   ];
 
   security.polkit.enable = true;
   virtualisation.docker.enable = true;
-
-  programs = {
-    niri.enable = true;
-    xwayland.enable = true;
-  };
-
-  environment.variables = {
-    LD_LIBRARY_PATH = "/run/opengl-driver/lib";
-    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
-    OZONE_PLATFORM = "wayland";
-    GDK_BACKEND = "wayland";
-  };
 
   system.stateVersion = "25.05";
 }

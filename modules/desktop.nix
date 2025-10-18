@@ -2,26 +2,17 @@
 
 {
   services = {
-    displayManager = {
-      enable = true;
-      ly.enable = true;
-      defaultSession = "xfce";
-    };
-
     xserver = {
-      desktopManager = {
-        xfce = {
-          enable = true;
-          noDesktop = true;
-          enableXfwm = false;
-        };
-      };
+      enable = true;
 
       xkb = {
         layout = "us";
         variant = "";
       };
     };
+
+    displayManager.sddm.enable = true;
+    desktopManager.plasma6.enable = true;
   };
 
   console.keyMap = "us";
