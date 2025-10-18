@@ -6,9 +6,9 @@
   home.stateVersion = "25.05";
 
   imports = [
+    <home-manager/nixos>
     ./waybar/waybar.nix
     ./warp/warp.nix
-    ./plasma.nix
     ./ghostty.nix
     ./tmux.nix
   ];
@@ -62,4 +62,18 @@
   programs.bash.enable = true;
   services.swww.enable = true;
   services.swaync.enable = true;
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.sharedModules = [ <plasma-manager/modules> ];
+
+  home-manager.users.daveloper-nix = { pkgs, ... }: {
+    programs.plasma = {
+      enable = true;
+      panels = [];
+
+      kwin.effects.blur.enable = true;
+      kscreenlocker.autoLock = false;
+    };
+  };
 }
