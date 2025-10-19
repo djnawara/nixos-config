@@ -11,7 +11,14 @@
       };
     };
 
-    displayManager.sddm.enable = true;
+    displayManager = {
+    	autoLogin = {
+        enable = true;
+        user = "dave";
+    	};
+
+      sddm.enable = true;
+    };
     desktopManager.plasma6.enable = true;
   };
 
