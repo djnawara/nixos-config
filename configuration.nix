@@ -32,7 +32,6 @@
       ./modules/shell.nix
       ./modules/steam.nix
       ./modules/user.nix
-      ./modules/wireshark.nix
     ];
 
   environment.systemPackages = with pkgs; [
