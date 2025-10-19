@@ -47,6 +47,9 @@
     ffmpeg
     ghostty
     gnumake
+
+    kdePackages.falkon
+
     killall
     lazydocker
     lsd
