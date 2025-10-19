@@ -24,7 +24,6 @@
       ./modules/desktop.nix
       ./modules/firefox.nix
       ./modules/fonts.nix
-      ./modules/git.nix
       ./modules/i18n.nix
       ./modules/jetbrains.nix
       ./modules/neovim.nix
@@ -47,7 +46,6 @@
     fastfetch
     ffmpeg
     ghostty
-    git
     gnumake
     killall
     lazydocker
