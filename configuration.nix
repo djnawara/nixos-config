@@ -39,6 +39,7 @@
     adw-gtk3
     bat
     btop
+    claude-code
     curl
     discord
     docker
@@ -47,9 +48,7 @@
     ffmpeg
     ghostty
     gnumake
-
     kdePackages.falkon
-
     killall
     lazydocker
     lsd
@@ -60,14 +59,11 @@
     nvidia-modprobe
     openvpn
     papirus-icon-theme
-
-    pkgs.prismlauncher
-    pkgs.warp-terminal
-
     polkit
     prismlauncher
     tmux
     vim
+    warp-terminal
     wget
     wireshark
     wl-clipboard-rs
