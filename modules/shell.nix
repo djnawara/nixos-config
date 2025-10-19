@@ -24,7 +24,7 @@
       ls = "lsd";
       ll = "lsd -alh --group-dirs first";
       cat = "bat";
-      update = "sudo nixos-rebuild switch --flake .";
+      nix-update = "sudo nixos-rebuild switch --flake . --impure";
       nix-clean = "sudo nix-store --gc && sudo nix-collect-garbage --delete-old";
       wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
     };
