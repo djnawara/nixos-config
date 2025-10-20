@@ -29,6 +29,7 @@
       ./modules/neovim.nix
       ./modules/networking.nix
       ./modules/printing.nix
+      ./modules/security.nix
       ./modules/shell.nix
       ./modules/steam.nix
       ./modules/user.nix
@@ -47,7 +48,6 @@
     ffmpeg
     ghostty
     gnumake
-    kdePackages.falkon
     killall
     lazydocker
     lsd
