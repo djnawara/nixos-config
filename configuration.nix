@@ -18,7 +18,6 @@
 
   imports = [
       ./hardware-configuration.nix
-      ./modules/hardware/nvidia.nix
 
       ./modules/audio.nix
       ./modules/desktop.nix
@@ -39,6 +38,7 @@
     adw-gtk3
     bat
     btop
+    chromium
     claude-code
     curl
     discord
