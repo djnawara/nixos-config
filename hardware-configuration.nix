@@ -5,6 +5,8 @@
 
 {
   imports = [
+    ./modules/hardware/nvidia.nix
+    ./modules/hardware/bluetooth.nix
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
