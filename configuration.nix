@@ -48,6 +48,7 @@
     ffmpeg
     ghostty
     gnumake
+    helix
     killall
     lazydocker
     lsd
@@ -67,6 +68,7 @@
     wireshark
     wl-clipboard-rs
     wlogout
+    zoom-us
   ];
 
   security.polkit.enable = true;
