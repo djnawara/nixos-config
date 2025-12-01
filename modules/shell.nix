@@ -26,6 +26,7 @@
       cat = "bat";
       nix-update = "sudo nixos-rebuild switch --flake . --impure";
       nix-clean = "sudo nix-store --gc && sudo nix-collect-garbage --delete-old";
+      nix-flake-update = "sudo nix flake update";
       wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
     };
 
