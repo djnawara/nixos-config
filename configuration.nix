@@ -68,6 +68,7 @@
     wireshark
     wl-clipboard-rs
     wlogout
+    zed-editor
     zoom-us
   ];
 
