@@ -16,3 +16,8 @@ result-*
 
 # macOS
 .DS_Store
+
+# AI files
+CLAUDE.md
+.claude/
+
