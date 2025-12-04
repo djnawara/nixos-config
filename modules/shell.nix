@@ -1,22 +1,29 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    zsh
-    meslo-lgs-nf
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      zsh
+      meslo-lgs-nf
+    ];
 
-  environment.etc."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
+    etc."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
 
-  environment.shellAliases = {
-    grep = "grep --color=auto";
-    ls = "lsd";
-    ll = "lsd -alh --group-dirs first";
-    cat = "bat";
-    nshell = "nix-shell --run $SHELL";
-    nix-update = "sudo nixos-rebuild switch --flake . --impure";
-    nix-clean = "sudo nix-store --gc && sudo nix-collect-garbage --delete-old";
-    nix-flake-update = "sudo nix flake update";
-    wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
+    variables.EDITOR = "vim";
+    sessionVariables.PATH = [ "$HOME/.local/bin" ];
+
+    shellAliases = {
+      grep = "grep --color=auto";
+      ls = "lsd";
+      ll = "lsd -alh --group-dirs first";
+      cat = "bat";
+      nshell = "nix-shell --run $SHELL";
+      nix-update = "sudo nixos-rebuild switch --flake . --impure";
+      nix-clean = "sudo nix-store --gc && sudo nix-collect-garbage --delete-old";
+      nix-flake-update = "sudo nix flake update";
+      wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
+    };
+
+    shells = [ pkgs.zsh ];
   };
 
   programs.zsh = {
@@ -28,9 +35,6 @@
     histSize = 10000;
 
     promptInit = ''
-      export EDITOR=vim
-      export PATH="$PATH:$HOME/.local/bin"
-
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       source /etc/powerlevel10k/p10k.zsh
 
@@ -42,5 +46,4 @@
 
   users.defaultUserShell = pkgs.zsh;
   system.userActivationScripts.zshrc = "touch .zshrc";
-  environment.shells = [ pkgs.zsh ];
 }

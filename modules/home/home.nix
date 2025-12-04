@@ -17,7 +17,6 @@
   home.packages = with pkgs; [
     fastfetch
     btop
-    neovim
     tmux
     starship
     swaynotificationcenter

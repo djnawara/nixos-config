@@ -24,7 +24,6 @@
       ./modules/fonts.nix
       ./modules/i18n.nix
       ./modules/jetbrains.nix
-      ./modules/neovim.nix
       ./modules/networking.nix
       ./modules/printing.nix
       ./modules/security.nix
@@ -51,7 +50,6 @@
     killall
     lazydocker
     lsd
-    neovim
     nh
     nixfmt-rfc-style
     nmap
