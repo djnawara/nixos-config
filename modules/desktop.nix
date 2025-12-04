@@ -12,10 +12,10 @@
     };
 
     displayManager = {
-    	autoLogin = {
+      autoLogin = {
         enable = true;
         user = "dave";
-    	};
+      };
 
       sddm.enable = true;
     };

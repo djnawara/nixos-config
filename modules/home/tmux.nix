@@ -1,11 +1,9 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   programs.tmux = {
     enable = true;
     prefix = "C-Space";
     keyMode = "vi";
-    plugins = [
-    ];
     extraConfig = ''
       set -g @plugin 'tmux-plugins/tpm'
       set -g @plugin 'tarquibrian/vanzi'

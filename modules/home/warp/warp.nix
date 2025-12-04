@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.file.".local/share/warp-terminal/themes/".source = pkgs.fetchFromGitHub {
