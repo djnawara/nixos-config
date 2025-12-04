@@ -30,6 +30,7 @@
   ];
 
   programs.bash.enable = true;
+  services.ssh-agent.enable = true;
   services.swww.enable = true;
   services.swaync.enable = true;
 }

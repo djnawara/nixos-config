@@ -30,13 +30,9 @@
       wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
     };
 
-    # Add to /etc/zshrc
     promptInit = ''
       export EDITOR=vim
-
       export PATH="$PATH:$HOME/.local/bin"
-      eval "$(ssh-agent -s)"
-      ssh-add ~/.ssh/id_ed25519
 
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       source /etc/powerlevel10k/p10k.zsh

@@ -5,7 +5,7 @@
     isNormalUser = true;
     description = "Daveloper";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [ pkgs.zsh pkgs.oh-my-zsh pkgs.oh-my-posh ];
+    packages = with pkgs; [ zsh oh-my-zsh oh-my-posh ];
     hashedPassword = "***REDACTED***";
     shell = pkgs.zsh;
   };
