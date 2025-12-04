@@ -8,7 +8,15 @@
   environment.etc."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
 
   environment.shellAliases = {
+    grep = "grep --color=auto";
+    ls = "lsd";
+    ll = "lsd -alh --group-dirs first";
+    cat = "bat";
     nshell = "nix-shell --run $SHELL";
+    nix-update = "sudo nixos-rebuild switch --flake . --impure";
+    nix-clean = "sudo nix-store --gc && sudo nix-collect-garbage --delete-old";
+    nix-flake-update = "sudo nix flake update";
+    wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
   };
 
   programs.zsh = {
@@ -18,17 +26,6 @@
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
     histSize = 10000;
-
-    shellAliases = {
-      grep = "grep --color=auto";
-      ls = "lsd";
-      ll = "lsd -alh --group-dirs first";
-      cat = "bat";
-      nix-update = "sudo nixos-rebuild switch --flake . --impure";
-      nix-clean = "sudo nix-store --gc && sudo nix-collect-garbage --delete-old";
-      nix-flake-update = "sudo nix flake update";
-      wr = "ps aux | grep waybar | grep -v grep | awk '{print $2}' | xargs -I {} kill -2 {} && waybar & disown";
-    };
 
     promptInit = ''
       export EDITOR=vim
