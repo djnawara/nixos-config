@@ -1,2 +1,18 @@
 .idea/
 modules/variables.nix
+
+# Nix build outputs
+result
+result-*
+
+# direnv
+.direnv/
+.envrc
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
