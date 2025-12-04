@@ -25,7 +25,6 @@
       ./modules/i18n.nix
       ./modules/jetbrains.nix
       ./modules/networking.nix
-      ./modules/printing.nix
       ./modules/security.nix
       ./modules/shell.nix
       ./modules/steam.nix
@@ -35,14 +34,12 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     bat
-    btop
     chromium
     claude-code
     curl
     discord
     docker
     docker-compose
-    fastfetch
     ffmpeg
     ghostty
     gnumake
@@ -58,7 +55,6 @@
     papirus-icon-theme
     polkit
     prismlauncher
-    tmux
     vim
     warp-terminal
     wget

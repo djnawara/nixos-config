@@ -2,7 +2,6 @@
   description = "Daveloper's flake";
 
   inputs = {
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +16,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     home-manager,
     plasma-manager,
     ...
