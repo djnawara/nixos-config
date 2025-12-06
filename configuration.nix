@@ -16,20 +16,20 @@
   ];
 
   imports = [
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
 
-      ./modules/audio.nix
-      ./modules/desktop.nix
-      ./modules/firefox.nix
-      ./modules/fonts.nix
-      ./modules/i18n.nix
-      ./modules/jetbrains.nix
-      ./modules/networking.nix
-      ./modules/security.nix
-      ./modules/shell.nix
-      ./modules/steam.nix
-      ./modules/user.nix
-    ];
+    ./modules/audio.nix
+    ./modules/desktop.nix
+    ./modules/firefox.nix
+    ./modules/fonts.nix
+    ./modules/i18n.nix
+    ./modules/jetbrains.nix
+    ./modules/networking.nix
+    ./modules/security.nix
+    ./modules/shell.nix
+    ./modules/steam.nix
+    ./modules/user.nix
+  ];
 
   environment.systemPackages = with pkgs; [
     adw-gtk3

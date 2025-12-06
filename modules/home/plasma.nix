@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
   programs = {
@@ -6,7 +6,7 @@
       enable = true;
       kwin.effects.blur.enable = true;
       kscreenlocker.autoLock = false;
-      panels = [];
+      panels = [ ];
 
       workspace = {
         clickItemTo = "select";

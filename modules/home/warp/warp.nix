@@ -6,5 +6,5 @@
     repo = "themes";
     rev = "HEAD";
     sha256 = "8GHUFs1XAIuT+hF41n2zSMePTjaC2PCcVAFApVe6LDA=";
-   };
+  };
 }

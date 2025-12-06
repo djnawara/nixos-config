@@ -13,32 +13,34 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    plasma-manager,
-    ...
-  }@inputs: {
-    nixosConfigurations = {
-      daveloper-nix = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      plasma-manager,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+        daveloper-nix = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
 
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              backupFileExtension = "backup";
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
-              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-              users.dave = import ./modules/home/home.nix;
-            };
-          }
-        ];
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                backupFileExtension = "backup";
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+                users.dave = import ./modules/home/home.nix;
+              };
+            }
+          ];
+        };
       };
     };
-  };
 }
