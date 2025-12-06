@@ -2,6 +2,10 @@
   description = "Daveloper's flake";
 
   inputs = {
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,6 +21,7 @@
     {
       self,
       nixpkgs,
+      agenix,
       home-manager,
       plasma-manager,
       ...
@@ -28,6 +33,7 @@
 
           modules = [
             ./configuration.nix
+            agenix.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager = {

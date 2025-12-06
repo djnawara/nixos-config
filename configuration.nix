@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  age.identityPaths = [ "${config.users.users.dave.home}/.ssh/id_ed25519" ];
+  age.secrets.dave-password.file = ./secrets/dave-password.age;
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;

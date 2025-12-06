@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   users.users.dave = {
@@ -14,7 +14,7 @@
       oh-my-zsh
       oh-my-posh
     ];
-    hashedPassword = "***REDACTED***";
+    hashedPasswordFile = config.age.secrets.dave-password.path;
     shell = pkgs.zsh;
   };
 }
